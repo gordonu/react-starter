@@ -15,10 +15,10 @@ const commonConfig = merge([
     // entry: {
     //   app: PATHS.app,
     // },
-    // output: {
-    //   path: PATHS.build,
-    //   filename: '[name].js',
-    // },
+    output: {
+      path: PATHS.build,
+      filename: '[name].js',
+    },
 
     //Might not need resolve??
     resolve: {
@@ -75,10 +75,6 @@ const developmentConfig = merge([
   {
     entry: {
       app: ['react-hot-loader/patch', PATHS.app],
-    },
-    output: {
-      path: PATHS.build,
-      filename: '[name].js',
     },
     plugins: [
       new HtmlWebpackPlugin({
